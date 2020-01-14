@@ -18,6 +18,12 @@ class ItemTest < Minitest::Test
     assert_equal "$0.50", item2.price
   end
 
+  def test_items_can_be_added
+    item1 = Item.new({name: 'Peach', price: "$0.75"})
+    item2 = Item.new({name: 'Tomato', price: '$0.50'})
+
+
+  end
 
   end
 
