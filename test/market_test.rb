@@ -109,6 +109,7 @@ class MarketTest < Minitest::Test
     market.add_vendor(vendor2)
     market.add_vendor(vendor3)
 
-    assert_equal (["Banana Nice Cream", "Peach", "Peach-Raspberry Nice Cream", "Tomato"]), market.sorted_item_list
+    # assert_equal (["Banana Nice Cream", "Peach", "Peach-Raspberry Nice Cream", "Tomato"]), market.sorted_item_list
+    assert_equal ({item1 => 100, item2 => 7, item4 =>50, item3 => 25}), market.total_inventory
   end
 end

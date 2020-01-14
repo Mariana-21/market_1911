@@ -19,8 +19,14 @@ class Market
     @vendors.find_all {|vendor| vendor.inventory.include?(item)}
    end
 
-   def sorted_item_list
-     require "pry"; binding.pry
-     
+   # def sorted_item_list
+   #   require "pry"; binding.pry
+   #
+   # end
+
+   def total_inventory
+     @vendors.map do |vendor|
+       vendor.inventory[*keys.map(&:to_a).flatten]
+     end
    end
 end
